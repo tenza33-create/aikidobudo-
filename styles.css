@@ -835,10 +835,10 @@ h2 {
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-    gap: 0.72rem;
-    overflow-x: auto;
-    overflow-y: hidden;
-    white-space: nowrap;
+    gap: 0.5rem 0.72rem;
+    flex-wrap: wrap;
+    overflow: visible;
+    white-space: normal;
   }
 
   .menu a {
