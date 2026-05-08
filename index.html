@@ -72,9 +72,6 @@
           <div class="hero-actions">
             <a class="btn btn-primary" href="contacto.html">Ven a probar una clase</a>
             <a class="btn btn-ghost" href="multimedia.html">Ver galería</a>
-            <button class="btn btn-ghost" type="button" data-open-event-modal>
-              Nuevo evento
-            </button>
           </div>
         </div>
         <div class="hero-visual" aria-hidden="true">
@@ -257,10 +254,10 @@
       <p>Dojo Aikido Budo Elche · Nueva versión web en paralelo</p>
     </footer>
 
-    <a class="event-alert" id="eventAlert" href="noticias.html#evento-curso-mayo-2026" aria-label="Ver curso de Aikido en Elche, 16 y 17 de mayo">
+    <button class="event-alert" id="eventAlert" type="button" aria-haspopup="dialog" aria-controls="eventModal" aria-label="Ver curso de Aikido en Elche, 16 y 17 de mayo">
       <img src="carteles/curso-mayo-2026.jpg" alt="Cartel curso Aikido" />
       <span class="event-alert-label">Proximo evento</span>
-    </a>
+    </button>
 
     <div class="event-modal-backdrop" id="eventModalBackdrop" hidden>
       <section class="event-modal" id="eventModal" role="dialog" aria-modal="true" aria-labelledby="eventModalTitle">
