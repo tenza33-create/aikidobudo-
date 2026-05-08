@@ -619,6 +619,105 @@ h2 {
   color: var(--muted);
 }
 
+.event-poster-wrap {
+  margin: 0.8rem 0 0;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.68);
+}
+
+.event-poster {
+  display: block;
+  width: 100%;
+  max-height: 760px;
+  object-fit: contain;
+  background: rgba(255, 255, 255, 0.92);
+}
+
+.poster-missing {
+  min-height: 130px;
+  position: relative;
+}
+
+.poster-missing::after {
+  content: "Sube el cartel en images/curso-mayo-2026.jpg para verlo aqui";
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+  color: var(--accent);
+  background: rgba(255, 253, 248, 0.95);
+}
+
+.event-alert {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 25;
+  border: none;
+  border-radius: 999px;
+  padding: 0.72rem 1.15rem;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #fff;
+  background: linear-gradient(120deg, #d13f25, #ff9a3d);
+  box-shadow: 0 16px 32px rgba(70, 27, 14, 0.3);
+  cursor: pointer;
+  animation: eventPulse 1.15s infinite;
+}
+
+@keyframes eventPulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.05);
+    opacity: 0.62;
+  }
+}
+
+.event-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  background: rgba(18, 33, 47, 0.5);
+}
+
+.event-modal {
+  width: min(780px, calc(100% - 1.4rem));
+  max-height: calc(100vh - 2rem);
+  overflow: auto;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.2rem;
+}
+
+.event-modal-close {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--ink);
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  padding: 0.42rem 0.8rem;
+  cursor: pointer;
+  float: right;
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(20px);
@@ -696,5 +795,12 @@ h2 {
 
   .nav {
     position: relative;
+  }
+
+  .event-alert {
+    left: 0.7rem;
+    right: 0.7rem;
+    bottom: 0.7rem;
+    font-size: 0.8rem;
   }
 }

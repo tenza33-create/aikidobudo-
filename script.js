@@ -112,3 +112,57 @@ document.querySelectorAll('.top-bar').forEach((topBar) => {
   actions.appendChild(shareButton);
   topBar.appendChild(actions);
 });
+
+const eventAlert = document.querySelector('#eventAlert');
+const eventModalBackdrop = document.querySelector('#eventModalBackdrop');
+const eventModalClose = document.querySelector('#eventModalClose');
+
+function openEventModal() {
+  if (!eventModalBackdrop) {
+    return;
+  }
+
+  eventModalBackdrop.hidden = false;
+  document.body.style.overflow = 'hidden';
+}
+
+function closeEventModal() {
+  if (!eventModalBackdrop) {
+    return;
+  }
+
+  eventModalBackdrop.hidden = true;
+  document.body.style.overflow = '';
+}
+
+if (eventAlert && eventModalBackdrop && eventModalClose) {
+  eventAlert.addEventListener('click', openEventModal);
+
+  eventModalClose.addEventListener('click', closeEventModal);
+
+  eventModalBackdrop.addEventListener('click', (event) => {
+    if (event.target === eventModalBackdrop) {
+      closeEventModal();
+    }
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && !eventModalBackdrop.hidden) {
+      closeEventModal();
+    }
+  });
+
+  document.querySelectorAll('[data-open-event-modal]').forEach((trigger) => {
+    trigger.addEventListener('click', openEventModal);
+  });
+}
+
+document.querySelectorAll('[data-event-poster]').forEach((image) => {
+  image.addEventListener('error', () => {
+    const wrapper = image.closest('.event-poster-wrap');
+
+    if (wrapper) {
+      wrapper.classList.add('poster-missing');
+    }
+  });
+});
