@@ -641,7 +641,7 @@ h2 {
 }
 
 .poster-missing::after {
-  content: "Sube el cartel en images/curso-mayo-2026.jpg para verlo aqui";
+  content: "Sube el cartel en carteles/curso-mayo-2026.jpg para verlo aqui";
   position: absolute;
   inset: 0;
   display: grid;
@@ -665,6 +665,7 @@ h2 {
   text-decoration: none;
   width: 90px;
   animation: eventPulse 1.3s infinite;
+  touch-action: manipulation;
 }
 
 .event-alert img {
@@ -790,5 +791,75 @@ h2 {
   .event-alert img {
     width: 68px;
     height: 90px;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    width: min(1100px, calc(100% - 1rem));
+  }
+
+  .site-header {
+    padding-top: 0.7rem;
+  }
+
+  .top-bar {
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .brand-text {
+    font-size: 0.92rem;
+  }
+
+  .hero {
+    padding: 2.4rem 0 2.3rem;
+  }
+
+  .hero p {
+    font-size: 1.08rem;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .section {
+    padding: 2.7rem 0;
+  }
+
+  .card,
+  .timeline-item,
+  .quote-card,
+  .class-card,
+  .profile-card,
+  .contact-card {
+    padding: 1rem;
+  }
+
+  .card p,
+  .timeline-item p,
+  .quote-card p,
+  .class-card li,
+  .profile-card p,
+  .contact-card p {
+    font-size: 1.06rem;
+  }
+
+  .event-alert {
+    right: 0.45rem;
+    top: 4.6rem;
+    width: 62px;
+  }
+
+  .event-alert img {
+    width: 62px;
+    height: 82px;
+    border-width: 1px;
+  }
+
+  .event-alert-label {
+    font-size: 0.56rem;
+    padding: 0.16rem 0.42rem;
   }
 }
