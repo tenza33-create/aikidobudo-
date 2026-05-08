@@ -135,8 +135,7 @@ function closeEventModal() {
   document.body.style.overflow = '';
 }
 
-if (eventAlert && eventModalBackdrop && eventModalClose) {
-  eventAlert.addEventListener('click', openEventModal);
+if (eventModalBackdrop && eventModalClose) {
 
   eventModalClose.addEventListener('click', closeEventModal);
 
