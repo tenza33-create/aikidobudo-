@@ -703,6 +703,10 @@ h2 {
   }
 }
 
+.menu-break {
+  display: none;
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(20px);
@@ -844,6 +848,14 @@ h2 {
   .menu a {
     font-size: 0.7rem;
     flex: 0 0 auto;
+  }
+
+  .menu-break {
+    flex-basis: 100%;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
   }
 
   .hero {
