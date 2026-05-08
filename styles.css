@@ -702,40 +702,6 @@ h2 {
   }
 }
 
-.event-modal-backdrop {
-  position: fixed;
-  inset: 0;
-  z-index: 30;
-  display: grid;
-  place-items: center;
-  padding: 1rem;
-  background: rgba(18, 33, 47, 0.5);
-}
-
-.event-modal {
-  width: min(780px, calc(100% - 1.4rem));
-  max-height: calc(100vh - 2rem);
-  overflow: auto;
-  background: var(--paper);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  padding: 1.2rem;
-}
-
-.event-modal-close {
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  background: #fff;
-  color: var(--ink);
-  font-family: "Oswald", sans-serif;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  padding: 0.42rem 0.8rem;
-  cursor: pointer;
-  float: right;
-}
-
 .reveal {
   opacity: 0;
   transform: translateY(20px);
